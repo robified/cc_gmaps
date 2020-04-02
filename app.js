@@ -10,11 +10,18 @@ function initMap() {
         zoom: 13
     });
 
+    // single point marker window
     // this is a marker instance
     let tokyoTower = { lat: 35.6586, lng: 139.7454 };
-    let market = new google.maps.Marker({
+    let marker = new google.maps.Marker({
         position: tokyoTower,
         map: map,
         title: 'Tokyo Tower!'
     });
+    // this is an info window
+    let infowindow = new google.maps.InfoWindow({
+        content:
+            'Do you ever feel like an InforWindows, floating through the wind, ready to start again?'
+    });
+    marker.addListener('click', () => infowindow.open(map, marker));
 }
