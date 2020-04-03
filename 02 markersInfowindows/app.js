@@ -21,7 +21,7 @@ function initMap() {
     // TODO: create a single infowindow, with your own content.
     // It must appear on the marker
     let infowindow = new google.maps.InfoWindow({
-        content: 'Am I working now?'
+        content: '<div>' + marker.position + '</div>'
     });
 
     // TODO: create an EVENT LISTENER so that the infowindow opens when
